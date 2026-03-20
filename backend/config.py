@@ -50,14 +50,16 @@ class Settings(BaseSettings):
     JWT_ALGORITHM: str = "HS256"
     JWT_EXPIRY_HOURS: int = 24
     
-    # Admin credentials (change these)
+    # Admin credentials
     ADMIN_USERNAME: str = Field(default="admin", alias="ADMIN_USERNAME")
     ADMIN_PASSWORD: str = Field(default="Sai", alias="ADMIN_PASSWORD")
     
     allowed_origins: List[str] = [
         "http://localhost:5173",
         "http://127.0.0.1:5173",
-        "http://localhost:3000"
+        "http://localhost:3000",
+        "https://alumai-frontend.vercel.app",
+        "https://alumai-frontend-n72ph3niy-dracula699s-projects.vercel.app",
     ]
 
     class Config:
